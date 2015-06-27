@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 public class RemoveOverlap : MonoBehaviour {
-	public void OnGui() {
+	public void OnDrawGizmos() {
 		DestroyOverlappedAssets ();
 	}
-
+	
 	void DestroyOverlappedAssets () {
 		var otherAssets = Physics2D.OverlapCircleAll (new Vector2 (this.gameObject.transform.localPosition.x, 
 		                                                           this.gameObject.transform.localPosition.y),
