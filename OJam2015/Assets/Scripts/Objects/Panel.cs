@@ -8,29 +8,34 @@ public class Panel : MonoBehaviour {
 		Destroy
 	}
 	
+	
+	public enum EventType {
+		Enter,
+		Exit
+	}
+	
 	public TriggerType type = TriggerType.Destroy;
 	
 	public List<GameObject> triggerObjects = new List<GameObject>();
 	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 	
 	void OnTriggerEnter2D(Collider2D collider2D) {
 		if (type == TriggerType.Destroy) {
-			if (collider2D.gameObject.tag == "Player") {
-				foreach(GameObject triggerObject in triggerObjects) {
-					GameObject.Destroy(triggerObject);
-				}
-				
-				triggerObjects.Clear();
+			DestroyTrigger(collider2D.tag, EventType.Enter);
+		}
+	}
+	
+	void OnTriggerExited2D(Collider2D collider2D) {
+		
+	}
+	
+	void DestroyTrigger(string tag, EventType type) {
+		if(tag == "Player" && type == EventType.Enter) {
+			foreach(GameObject triggerObject in triggerObjects) {
+				GameObject.Destroy(triggerObject);
 			}
+			
+			triggerObjects.Clear();
 		}
 	}
 }
