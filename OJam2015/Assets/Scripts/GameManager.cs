@@ -2,14 +2,19 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-	private GameObject player;
+	private GameObject player1;
+	private GameObject player2;
 	private GameState currentState;
 	private GameState[] availableStates;
 	
 	public bool useSplitScreen = false;
 
-	public GameObject Player {
-		get { return player; }
+	public GameObject Player1 {
+		get { return player1; }
+	}
+
+	public GameObject Player2 {
+		get { return player2; }
 	}
 
 	public static GameManager Instance = null;
@@ -20,9 +25,17 @@ public class GameManager : MonoBehaviour {
 
 			availableStates = Resources.LoadAll<GameState>("Game States");
 
-			player = GameObject.FindGameObjectWithTag("Player");
-			if (player == null) {
-				Debug.LogError("Unable to awaken Game Manager: No game object has Player tag.");
+			GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+			if (players.Length > 0) {
+				player1 = players[0];
+			}
+
+			if (players.Length > 1) {
+				player2 = players[1];
+			}
+
+			if (player1 == null) {
+				Debug.LogError("Unable to awaken Game Manager: At least one tagged player is required.");
 			}
 		}
 		else {

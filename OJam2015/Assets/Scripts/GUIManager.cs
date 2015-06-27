@@ -6,6 +6,9 @@ public class GUIManager : MonoBehaviour {
 	public Slider p1Healthbar;
 	PlayerHealth p1Health;
 
+	public Slider p2Healthbar;
+	PlayerHealth p2Health;
+
 	public static GUIManager Instance;
 
 	void Awake() {
@@ -23,11 +26,21 @@ public class GUIManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (GameManager.Instance.Player) {
-			p1Health = GameManager.Instance.Player.GetComponent<PlayerHealth>();
+		if (GameManager.Instance.Player1) {
+			p1Health = GameManager.Instance.Player1.GetComponent<PlayerHealth>();
 			p1Healthbar.minValue = 0;
 			p1Healthbar.maxValue = p1Health.maxHP;
 			p1Healthbar.value = p1Health.CurrentHP;
+		}
+
+		if (GameManager.Instance.Player2) {
+			p2Health = GameManager.Instance.Player2.GetComponent<PlayerHealth>();
+			p2Healthbar.minValue = 0;
+			p2Healthbar.maxValue = p1Health.maxHP;
+			p2Healthbar.value = p1Health.CurrentHP;
+		}
+		else {
+			p2Healthbar.enabled = false;
 		}
 	}
 	
@@ -39,5 +52,6 @@ public class GUIManager : MonoBehaviour {
 
 	public void UpdateGUI() {
 		p1Healthbar.value = p1Health.CurrentHP;
+		p2Healthbar.value = p2Health.CurrentHP;
 	}
 }
