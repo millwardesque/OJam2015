@@ -3211,29 +3211,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413824, guid: 57ff858480e7a4fd389e83e6c765fa20, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57ff858480e7a4fd389e83e6c765fa20, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1537317334 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 154304, guid: 57ff858480e7a4fd389e83e6c765fa20, type: 2}
-  m_PrefabInternal: {fileID: 1537317333}
---- !u!114 &1537317335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1537317334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6ebab9b8d094da5a8436b05b3354bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePrefab: {fileID: 11457092, guid: d4c179d3d26634085a4cc21b0e99c3ff, type: 2}
-  gridSquareDimensions: {x: 1, y: 1}
-  perFlameSpawnProbability: .00999999978
 --- !u!1001 &1561015765
 Prefab:
   m_ObjectHideFlags: 0

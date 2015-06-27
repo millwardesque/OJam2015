@@ -108,7 +108,19 @@ public class GameManager : MonoBehaviour {
 		p2Camera.GetComponent<AudioListener>().enabled = false;
 
 		// @TODO Set the new camera to follow something.
-		p2Camera.GetComponent<CameraFollow>().target = null;
+		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		if (players.Length > 1) {
+			camera.GetComponent<CameraFollow>().target = players[0].transform;
+			p2Camera.GetComponent<CameraFollow>().target = players[1].transform;
+		}
+		else if (players.Length == 1) {
+			camera.GetComponent<CameraFollow>().target = players[0].transform;
+			p2Camera.GetComponent<CameraFollow>().target = null;
+		}
+		else {
+			camera.GetComponent<CameraFollow>().target = null;
+			p2Camera.GetComponent<CameraFollow>().target = null;
+		}
 	}
 
 	public void DisableSplitscreen() {
