@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488516}
   - 212: {fileID: 21279652}
+  - 95: {fileID: 9551324}
   m_Layer: 0
   m_Name: Flame Sprite
   m_TagString: Untagged
@@ -88,6 +89,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .319999993
+--- !u!95 &9551324
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84040daf947b34a908eb3cccd7e30965, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11457092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +142,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29bc4a6931ea94f96af7d09e365ba0c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f52071a4be65a464aa8823db79b7ae9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
