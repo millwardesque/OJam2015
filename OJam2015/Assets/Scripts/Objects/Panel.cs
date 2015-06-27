@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class Panel : MonoBehaviour {
 	
 	public enum TriggerType {
-		Destroy
+		Destroy,
+		Phase
 	}
 	
 	
@@ -23,10 +24,16 @@ public class Panel : MonoBehaviour {
 		if (type == TriggerType.Destroy) {
 			DestroyTrigger(collider2D.tag, EventType.Enter);
 		}
+		
+		if (type == TriggerType.Phase) {
+			PhaseTrigger(collider2D.tag, EventType.Enter);
+		}
 	}
 	
-	void OnTriggerExited2D(Collider2D collider2D) {
-		
+	void OnTriggerExit2D(Collider2D collider2D) {
+		if (type == TriggerType.Phase) {
+			PhaseTrigger(collider2D.tag, EventType.Exit);
+		}
 	}
 	
 	void DestroyTrigger(string tag, EventType type) {
@@ -36,6 +43,20 @@ public class Panel : MonoBehaviour {
 			}
 			
 			triggerObjects.Clear();
+		}
+	}
+	
+	void PhaseTrigger(string tag, EventType type) {
+		if(tag == "Player" && type == EventType.Enter) {
+			foreach(GameObject triggerObject in triggerObjects) {
+				triggerObject.BroadcastMessage("PhaseOut");
+			}
+		}
+		
+		if(tag == "Player" && type == EventType.Exit) {
+			foreach(GameObject triggerObject in triggerObjects) {
+				triggerObject.BroadcastMessage("PhaseIn");
+			}
 		}
 	}
 }
