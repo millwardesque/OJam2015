@@ -2,8 +2,13 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
+	private GameObject player;
 	private GameState currentState;
-	GameState[] availableStates;
+	private GameState[] availableStates;
+
+	public GameObject Player {
+		get { return player; }
+	}
 
 	public static GameManager Instance = null;
 
@@ -14,6 +19,11 @@ public class GameManager : MonoBehaviour {
 			availableStates = Resources.LoadAll<GameState>("Game States");
 			for (int i = 0; i < availableStates.Length; ++i) {
 				Debug.Log("Loaded state '" + availableStates[i].name + "'");
+			}
+
+			player = GameObject.FindGameObjectWithTag("Player");
+			if (player == null) {
+				Debug.LogError("Unable to awaken Game Manager: No game object has Player tag.");
 			}
 		}
 		else {

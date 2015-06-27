@@ -9,7 +9,7 @@ public class Health : MonoBehaviour {
 		get { return currentHP; }
 	}
 	
-	void Start() {
+	void Awake() {
 		ResetHP();
 	}
 
@@ -20,10 +20,15 @@ public class Health : MonoBehaviour {
 	public void AdjustHP(int amount) {
 		currentHP += amount;
 		currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+		OnChange(currentHP - amount, currentHP);
 
 		if (currentHP == 0) {
 			OnDead ();
 		}
+	}
+
+	protected virtual void OnChange(int oldHP, int newHP) {
+		Debug.Log (string.Format("HP for {0} has changed from {1} to {2}", this.gameObject.name, oldHP, newHP));
 	}
 
 	protected virtual void OnDead() {

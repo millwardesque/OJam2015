@@ -94,7 +94,5 @@ public class FireManager : MonoBehaviour {
 		newFire.transform.position = spawner.transform.position + new Vector3(xOffsetUnits * gridSquareDimensions.x, yOffsetUnits * gridSquareDimensions.y, 0f);
 		flames.Add(newFire);
 		flamesGenerated++;
-
-		Debug.Log (string.Format("Created {0} at ({1}, {2})", newFire.name, newFire.transform.position.x, newFire.transform.position.y));
 	}
 }
