@@ -1825,8 +1825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0576573f333b243439afe03605e0a25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPosition: 1.69195151
-  yPosition: 4.22884274
+  xPosition: .627884448
+  yPosition: 3.16477537
   marker: {fileID: 1197006616}
   isMarkerActive: 0
 --- !u!114 &931282853
@@ -1848,7 +1848,7 @@ MonoBehaviour:
     tab: Floor
     keyCode: 0
     gameObject: {fileID: 168340, guid: 86e47d9c130a74a23bfacd616b4b9728, type: 2}
-    shouldRefresh: 1
+    shouldRefresh: 0
   - filePath: Assets/Prefabs/PlacementAssets/Object/PanelTile.prefab
     name: Object/PanelTile.prefab
     tab: Object
