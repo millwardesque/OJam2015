@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6ebab9b8d094da5a8436b05b3354bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePrefab: {fileID: 0}
+  firePrefab: {fileID: 11457092, guid: d4c179d3d26634085a4cc21b0e99c3ff, type: 2}
   gridSquareDimensions: {x: 1, y: 1}
   perFlameSpawnProbability: .00499999989
 --- !u!1001 &100100000
