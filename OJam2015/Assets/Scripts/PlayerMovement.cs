@@ -14,6 +14,35 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () {
 		
 	}
+
+	void Update() {
+		float x = rb.velocity.x;
+		float y = rb.velocity.y;
+
+		if (rb.velocity.magnitude < 0.2f) {
+			GetComponentInChildren<Animator>().speed = 0f;
+			// GetComponentInChildren<Animator>().SetTrigger("Idle");
+		}
+		else {
+			GetComponentInChildren<Animator>().speed = 1f;
+			if (Mathf.Abs(x) > Mathf.Abs (y)) {
+				if (x > 0) {
+					GetComponentInChildren<Animator>().SetTrigger("Walking Right");
+				}
+				else if (x < 0) {
+					GetComponentInChildren<Animator>().SetTrigger("Walking Left");
+				}
+			}
+			else {
+				if (y > 0) {
+					GetComponentInChildren<Animator>().SetTrigger("Walking Up");
+				}
+				else if (y < 0) {
+					GetComponentInChildren<Animator>().SetTrigger("Walking Down");
+				}
+			}
+		}
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
