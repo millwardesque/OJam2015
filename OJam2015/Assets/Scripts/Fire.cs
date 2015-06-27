@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Fire : MonoBehaviour {
+	public int damage = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +15,10 @@ public class Fire : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.collider.tag == "Player") {
-			Destroy(col.collider.gameObject);
+		GameObject other = col.collider.gameObject;
+		Health otherHealth = other.GetComponent<Health>();
+		if (other.tag == "Player" && otherHealth != null) {
+			otherHealth.AdjustHP(-damage);
 		}
 	}
 }
