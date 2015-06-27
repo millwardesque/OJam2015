@@ -25,7 +25,6 @@ public class GUIManager : MonoBehaviour {
 	void Start () {
 		if (GameManager.Instance.Player) {
 			p1Health = GameManager.Instance.Player.GetComponent<PlayerHealth>();
-			Debug.Log ("Updating..." + p1Health.CurrentHP);
 			p1Healthbar.minValue = 0;
 			p1Healthbar.maxValue = p1Health.maxHP;
 			p1Healthbar.value = p1Health.CurrentHP;

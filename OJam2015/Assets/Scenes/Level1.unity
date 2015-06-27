@@ -87,6 +87,10 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &27861511 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 479884, guid: 3b700ccc0030645dda2ced14baaa4c47, type: 2}
+  m_PrefabInternal: {fileID: 1335634174}
 --- !u!1001 &28523211
 Prefab:
   m_ObjectHideFlags: 0
@@ -837,7 +841,7 @@ Transform:
   - {fileID: 757881473}
   - {fileID: 390737985}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
 --- !u!1001 &450137060
 Prefab:
   m_ObjectHideFlags: 0
@@ -2323,51 +2327,55 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22468718, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22468718, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22468718, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 44.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22468718, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22468718, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 68.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22468718, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22469394, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22469394, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22469394, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 88.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22469394, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22469394, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 251.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22469394, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488092, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
+      propertyPath: m_Text
+      value: 'P1 HP:'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9243d659bd434d59aabd4a51acfdfca, type: 2}
@@ -3461,6 +3469,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400876, guid: 4d7a590433c384fd79ffe63acdbd687b, type: 2}
+      propertyPath: useSplitScreen
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d7a590433c384fd79ffe63acdbd687b, type: 2}
   m_IsPrefabParent: 0
@@ -3668,8 +3680,9 @@ GameObject:
   - 92: {fileID: 1798919591}
   - 124: {fileID: 1798919590}
   - 81: {fileID: 1798919589}
+  - 114: {fileID: 1798919594}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: P1 Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3741,6 +3754,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1798919594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798919588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5eb0165dfed432db1a7857232bc2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 27861511}
 --- !u!1001 &1809548085
 Prefab:
   m_ObjectHideFlags: 0
