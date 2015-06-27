@@ -120,8 +120,8 @@ MonoBehaviour:
   lookAtSelect: 0
   oldTransform: {fileID: 0}
   oldSelectedTransform: {fileID: 0}
-  oldSelectedLength: 9
-  oldPosition: {x: -5, y: -11, z: 500}
+  oldSelectedLength: 1
+  oldPosition: {x: 122, y: 20, z: 500}
   oldScale: {x: 1, y: 1, z: 1}
   oldRotation: {x: -0, y: 0, z: 0}
   movToggleKey: 256

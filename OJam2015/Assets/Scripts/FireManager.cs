@@ -59,10 +59,10 @@ public class FireManager : MonoBehaviour {
 		Physics2D.raycastsStartInColliders = false;
 
 		Vector2[] possibleDirections = {
-			Vector2.left,
-			Vector2.right,
-			Vector2.up,
-			Vector2.down
+			new Vector2(-1, 0), //Vector2.left, //TODO Change back
+			new Vector2(1, 0), //Vector2.right,
+			new Vector2(0, 1), //Vector2.up,
+			new Vector2(0, -1), //Vector2.down
 		};
 		List<Vector2> allowedDirections = new List<Vector2>();
 		for (int i = 0; i < possibleDirections.Length; ++i) {

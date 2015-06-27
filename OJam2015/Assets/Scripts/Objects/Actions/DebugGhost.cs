@@ -14,4 +14,12 @@ public class DebugGhost : MonoBehaviour {
 			gameObject.GetComponent<Collider2D> ().enabled = false;
 		
 	}
+
+	public void SeeThroughOut() {
+		if (gameObject.GetComponent<SpriteRenderer> ())
+			gameObject.GetComponent<SpriteRenderer> ().color = new Color (gameObject.GetComponent<SpriteRenderer> ().color.r, 
+			                                                              gameObject.GetComponent<SpriteRenderer> ().color.g, 
+			                                                              gameObject.GetComponent<SpriteRenderer> ().color.b, 
+			                                                              0.4f);
+	}
 }
