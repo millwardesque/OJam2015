@@ -111,4 +111,14 @@ public class FireManager : MonoBehaviour {
 		spreadableFlames.Add(newFire);
 		flamesGenerated++;
 	}
+
+	public void StartFire(Vector3 position) {
+		Fire newFire = Instantiate<Fire>(firePrefab);
+		newFire.name = "Flame - " + flamesGenerated;
+		newFire.transform.SetParent(transform, true);
+		newFire.transform.position = position;
+		flames.Add(newFire);
+		spreadableFlames.Add(newFire);
+		flamesGenerated++;
+	}
 }
