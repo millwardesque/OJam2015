@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePrefab: {fileID: 11457092, guid: d4c179d3d26634085a4cc21b0e99c3ff, type: 2}
   gridSquareDimensions: {x: 1, y: 1}
-  perFlameSpawnProbability: .00499999989
+  perFlameSpawnProbability: .00999999978
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

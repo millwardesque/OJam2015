@@ -8,6 +8,8 @@ public class FireManager : MonoBehaviour {
 	public Vector2 gridSquareDimensions = new Vector2(1f, 1f);	
 	public float perFlameSpawnProbability = 0.005f;
 	List<Fire> flames = new List<Fire>();
+	List<Fire> spreadableFlames = new List<Fire> ();
+	List<Fire> nonspreadableFlames = new List<Fire> ();
 	int flamesGenerated = 0; 
 
 	void Awake() {
@@ -24,19 +26,23 @@ public class FireManager : MonoBehaviour {
 	}
 
 	void Start() {
-		SpawnFire(firePrefab, 1, 1);
-		SpawnFire(firePrefab, 2, 1);
+		foreach (GameObject flame in GameObject.FindGameObjectsWithTag("Fire")) {
+			SpawnFire(flame.GetComponent<Fire>(), 0, 0);
+			Destroy (flame);
+		}
 	}
 
 	void FixedUpdate() {
 		CleanUpFlames();
 
-		for (int i = 0; i < flames.Count; ++i) {
+		for (int i = 0; i < spreadableFlames.Count; ++i) {
+			Fire flame = spreadableFlames[i];
+
 			float n = Random.Range(0, 1f);
 			if (n < perFlameSpawnProbability) {
 				Vector2 gridOffset = Vector2.zero;
-				if (FindFireSpawnPoint(flames[i], ref gridOffset)) {
-					SpawnFire(flames[i], (int)gridOffset.x, (int)gridOffset.y);
+				if (FindFireSpawnPoint(flame, ref gridOffset)) {
+					SpawnFire(flame, (int)gridOffset.x, (int)gridOffset.y);
 				}
 			}
 		}
@@ -51,6 +57,8 @@ public class FireManager : MonoBehaviour {
 		}
 		foreach (Fire fire in deadList) {
 			flames.Remove(fire);
+			spreadableFlames.Remove (fire);
+			nonspreadableFlames.Remove (fire);
 		}
 	}
 
@@ -83,8 +91,15 @@ public class FireManager : MonoBehaviour {
 			return true;
 		}
 		else {
+			MakeFlameNonspreadable(spawner);
 			return false;
 		}
+	}
+
+	void MakeFlameNonspreadable(Fire flame) {
+		spreadableFlames.Remove(flame);
+		nonspreadableFlames.Add (flame);
+		flame.gameObject.GetComponent<Rigidbody2D>().Sleep();
 	}
 
 	void SpawnFire(Fire spawner, int xOffsetUnits, int yOffsetUnits) {
@@ -93,6 +108,7 @@ public class FireManager : MonoBehaviour {
 		newFire.transform.SetParent(transform, true);
 		newFire.transform.position = spawner.transform.position + new Vector3(xOffsetUnits * gridSquareDimensions.x, yOffsetUnits * gridSquareDimensions.y, 0f);
 		flames.Add(newFire);
+		spreadableFlames.Add(newFire);
 		flamesGenerated++;
 	}
 }
