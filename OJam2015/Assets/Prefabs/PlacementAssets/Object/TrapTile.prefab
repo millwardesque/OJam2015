@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21276848}
   - 50: {fileID: 5076312}
   - 61: {fileID: 6178872}
-  - 114: {fileID: 11404392}
   - 114: {fileID: 11430216}
   m_Layer: 0
   m_Name: TrapTile
@@ -60,17 +59,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &11404392
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab503b58ec0eb4eb681571f11bd981cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11430216
 MonoBehaviour:
   m_ObjectHideFlags: 1

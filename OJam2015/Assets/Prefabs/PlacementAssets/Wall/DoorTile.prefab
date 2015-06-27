@@ -13,7 +13,6 @@ GameObject:
   - 61: {fileID: 6166142}
   - 114: {fileID: 11410876}
   - 114: {fileID: 11468740}
-  - 114: {fileID: 11431426}
   m_Layer: 0
   m_Name: DoorTile
   m_TagString: Untagged
@@ -35,7 +34,6 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5060656
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -44,11 +42,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
+  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &6166142
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -71,17 +69,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6c986cd972f4da383522884387d085, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11431426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab503b58ec0eb4eb681571f11bd981cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11468740
