@@ -5,7 +5,6 @@ public class PlayerHealth : Health {
 
 	protected override void OnDead() {
 		base.OnDead();
-
-		Destroy (gameObject);
+		GameManager.Instance.OnPlayerDead();
 	}
 }
