@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (rb.velocity.magnitude < 0.2f) {
 			GetComponentInChildren<Animator>().speed = 0f;
-			// GetComponentInChildren<Animator>().SetTrigger("Idle");
 		}
 		else {
 			GetComponentInChildren<Animator>().speed = 1f;
@@ -52,7 +51,6 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Debug.Log (inputPrefix + "Horizontal");
 		float x = Input.GetAxis(inputPrefix + "Horizontal");
 		float y = Input.GetAxis (inputPrefix + "Vertical");
 		Vector2 force = new Vector2(x, y) * speed;
