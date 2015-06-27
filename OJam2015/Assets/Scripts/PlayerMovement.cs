@@ -6,6 +6,12 @@ public class PlayerMovement : MonoBehaviour {
 	Rigidbody2D rb;
 	public float speed = 1f;
 
+	private string inputPrefix;
+	public string InputPrefix {
+		get { return InputPrefix; }
+		set { inputPrefix = value; }
+	}
+
 	void Awake() {
 		rb = GetComponent<Rigidbody2D>();
 	}
@@ -46,8 +52,9 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		float x = Input.GetAxis("Horizontal");
-		float y = Input.GetAxis ("Vertical");
+		Debug.Log (inputPrefix + "Horizontal");
+		float x = Input.GetAxis(inputPrefix + "Horizontal");
+		float y = Input.GetAxis (inputPrefix + "Vertical");
 		Vector2 force = new Vector2(x, y) * speed;
 
 		this.rb.AddForce(force);

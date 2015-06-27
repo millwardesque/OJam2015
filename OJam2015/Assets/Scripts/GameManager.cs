@@ -28,10 +28,12 @@ public class GameManager : MonoBehaviour {
 			GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 			if (players.Length > 0) {
 				player1 = players[0];
+				player1.GetComponent<PlayerMovement>().InputPrefix = "P1";
 			}
 
 			if (players.Length > 1) {
 				player2 = players[1];
+				player2.GetComponent<PlayerMovement>().InputPrefix = "P2";
 			}
 
 			if (player1 == null) {
