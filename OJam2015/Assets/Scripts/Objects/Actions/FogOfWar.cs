@@ -8,8 +8,8 @@ public class FogOfWar : MonoBehaviour {
 	bool isRevealed = false;
 	
 	void Start () {
-
-		renderer = this.gameObject.transform.parent.GetComponent<SpriteRenderer> ();
+		
+		renderer = this.gameObject.GetComponent<SpriteRenderer> ();
 		
 		renderer.color = Color.black;
 		
@@ -20,13 +20,6 @@ public class FogOfWar : MonoBehaviour {
 	float updateTime = 0.1f;
 	
 	void Update () {
-
-		//TODO Can't get this to work
-		return;
-
-
-
-
 		if (isRevealed) {
 			return;
 		}
@@ -40,32 +33,38 @@ public class FogOfWar : MonoBehaviour {
 		updateTime = 0.1f;
 		
 		
-		Vector2 direction = Vector2.one;
+
+		Vector3 usedPosition = Vector2.zero;
 		
-		if (Player.playerOne != null) {
-			direction =  Player.playerOne.transform.position - gameObject.transform.position;
-			
-			if(Mathf.Sqrt(direction.x * direction.x + direction.y * direction.y) > 8) {
+		if (Player.playerOne) {
+			usedPosition = Player.playerOne.transform.position;
+			CheckFogOfWar (usedPosition);
+		}
 
+		if (Player.playerTwo) {
+			usedPosition = Player.playerTwo.transform.position;
+			CheckFogOfWar (usedPosition);
+		}
 
-				return;
+	}
+
+	void CheckFogOfWar (Vector3 usedPosition)
+	{
+		Vector2 direction = usedPosition - gameObject.transform.position;
+		if (Mathf.Sqrt (direction.x * direction.x + direction.y * direction.y) > 6) {
+			return;
+		}
+		direction = direction.normalized;
+		int mask = (1 << 8);
+		RaycastHit2D hit = Physics2D.Raycast (gameObject.transform.position, direction, 6, mask);
+		if (hit.collider != null) {
+			if (hit.collider.tag == "Player") {
+				renderer.color = Color.white;
+				isRevealed = true;
 			}
-
-			//renderer.color = Color.gray;
-			
-			direction = direction.normalized;
-			
-			RaycastHit2D hit = Physics2D.Raycast (gameObject.transform.position, direction, 8);
-			
-			if (hit.collider != null) {
-				if(hit.collider.tag == "PlayerVision") {
-					renderer.color = Color.white;
-					isRevealed = true;
-				} else {
-					Debug.Log(hit.collider.tag);
-				}
+			else {
+				Debug.Log (hit.collider.tag);
 			}
-			
 		}
 	}
 }

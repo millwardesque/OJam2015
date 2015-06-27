@@ -5,6 +5,8 @@ public class Player : MonoBehaviour {
 
 
 	public static Player playerOne = null;
+	public static Player playerTwo = null;
+
 
 	public enum PlayerType {
 		One,
@@ -13,9 +15,14 @@ public class Player : MonoBehaviour {
 
 	public PlayerType type = PlayerType.One;
 
+
 	void Start () {
 		if (type == PlayerType.One) {
 			playerOne = this;
+		}
+
+		if (type == PlayerType.Two) {
+			playerTwo = this;
 		}
 	}
 	

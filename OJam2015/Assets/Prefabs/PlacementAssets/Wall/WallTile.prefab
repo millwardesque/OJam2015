@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21289656}
   - 61: {fileID: 6145746}
   - 50: {fileID: 5010384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
