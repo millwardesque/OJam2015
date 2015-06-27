@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 9b57f49de029f4be0aefab8e856d3fd7
+timeCreated: 1435445389
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: player_on_fire_0
+    21300002: player_on_fire_1
+    21300004: player_on_fire_2
+    21300006: player_on_fire_3
+    21300008: player_on_fire_4
+    21300010: player_on_fire_5
+    21300012: player_on_fire_6
+    21300014: player_on_fire_7
+    21300016: player_on_fire_8
+    21300018: player_on_fire_9
+    21300020: player_on_fire_10
+    21300022: player_on_fire_11
+    21300024: player_on_fire_12
+    21300026: player_on_fire_13
+    21300028: player_on_fire_14
+    21300030: player_on_fire_15
+    21300032: player_on_fire_16
+    21300034: player_on_fire_17
+    21300036: player_on_fire_18
+    21300038: player_on_fire_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: player_on_fire_0
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 380
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 304
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 304
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 304
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 304
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 284
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 208
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 208
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_8
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 208
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 208
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_10
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 116
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_11
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 188
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 116
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_13
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 116
+        width: 60
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 116
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_15
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 80
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 4
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_17
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 4
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 4
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_on_fire_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 4
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Player1-OnFire Sprite
+  m_Controller: {fileID: 9100000, guid: b14befb7fee33434b93c4f0ed175522e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d6a93c8121bbf432792859616e5bd631, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ece69b31635354891bdbbc9a7ed6c61a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b33414f8e27d0434f84d5555b459b584, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 10025ccda1b1e4825b7bdd25de9a7210, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: aa9154501bfb8412eb15e5f3c51e1333, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1e43f0a59b9c94c49b2d700cd7c1e4de, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4a4afb77944554adfa840542141702d1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 51281d262a78e4cb589ab754098e6958, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 475d76e581cb1407d94ba89e7fd968b3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7157d03962c56454d842d7197169f2c1, type: 2}
