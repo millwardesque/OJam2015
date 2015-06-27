@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5060656}
   - 61: {fileID: 6166142}
   - 114: {fileID: 11408552}
+  - 114: {fileID: 11479028}
   m_Layer: 0
   m_Name: DoorBTile
   m_TagString: Untagged
@@ -68,6 +69,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f6c986cd972f4da383522884387d085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11479028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab503b58ec0eb4eb681571f11bd981cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21275012

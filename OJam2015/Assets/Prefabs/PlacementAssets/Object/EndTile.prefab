@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5026342}
   - 61: {fileID: 6143898}
   - 114: {fileID: 11450790}
+  - 114: {fileID: 11430160}
   m_Layer: 0
   m_Name: EndTile
   m_TagString: Untagged
@@ -59,6 +60,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11430160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab503b58ec0eb4eb681571f11bd981cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11450790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e5182b3c57247baad12bd6da91a271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPoint: {fileID: 0}
 --- !u!212 &21256344
 SpriteRenderer:
   m_ObjectHideFlags: 1
