@@ -9,6 +9,8 @@ public class GUIManager : MonoBehaviour {
 	public Slider p2Healthbar;
 	PlayerHealth p2Health;
 
+	public GameObject winMessage;
+
 	public static GUIManager Instance;
 
 	void Awake() {
@@ -17,6 +19,14 @@ public class GUIManager : MonoBehaviour {
 
 			if (p1Healthbar == null) {
 				Debug.LogError("Unable to awaken GUI Manager: No P1 Healthbar is set.");
+			}
+
+			if (p2Healthbar == null) {
+				Debug.LogError("Unable to awaken GUI Manager: No P2 Healthbar is set.");
+			}
+
+			if (winMessage == null) {
+				Debug.LogError("Unable to awaken GUI Manager: No Win Message container is set.");
 			}
 		}
 		else {
@@ -53,5 +63,17 @@ public class GUIManager : MonoBehaviour {
 	public void UpdateGUI() {
 		p1Healthbar.value = p1Health.CurrentHP;
 		p2Healthbar.value = p2Health.CurrentHP;
+	}
+
+	public void ShowWinMessage() {
+		winMessage.SetActive(true);
+	}
+
+	public void HideWinMessage() {
+		winMessage.SetActive(false);
+	}
+
+	public void OnRestartClick() {
+		GameManager.Instance.RestartGame();
 	}
 }

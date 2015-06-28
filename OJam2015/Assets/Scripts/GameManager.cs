@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		SetGameState("gs-Escape From Fire");
+		GUIManager.Instance.HideWinMessage();
 	}
 	
 	// Update is called once per frame
@@ -73,6 +74,10 @@ public class GameManager : MonoBehaviour {
 
 	void LoadGameOver() {
 		Application.LoadLevel("Game Over");
+	}
+
+	public void OnWin() {
+		GUIManager.Instance.ShowWinMessage();
 	}
 
 	public void SetGameState(string stateName) {
@@ -148,5 +153,9 @@ public class GameManager : MonoBehaviour {
 		Rect tmp = camera.GetComponent<Camera>().rect;
 		tmp.width = 1f;
 		camera.GetComponent<Camera>().rect = tmp;
+	}
+
+	public void RestartGame() {
+		Application.LoadLevel(Application.loadedLevelName);
 	}
 }
