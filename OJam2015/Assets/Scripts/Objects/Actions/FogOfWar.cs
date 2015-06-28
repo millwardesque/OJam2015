@@ -10,8 +10,8 @@ public class FogOfWar : MonoBehaviour {
 	void Start () {
 		
 		renderer = this.gameObject.GetComponent<SpriteRenderer> ();
-		
-		renderer.color = Color.black;
+
+		renderer.enabled = false;
 		
 	}
 
@@ -57,7 +57,7 @@ public class FogOfWar : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast (gameObject.transform.position, direction, 6, mask);
 		if (hit.collider != null) {
 			if (hit.collider.tag == "Player") {
-				renderer.color = Color.white;
+				renderer.enabled = true;
 				isRevealed = true;
 			}
 		}

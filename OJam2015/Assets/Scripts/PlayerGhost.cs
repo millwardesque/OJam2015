@@ -99,7 +99,9 @@ public class PlayerGhost : MonoBehaviour {
 	}
 
 	void BackInRange () {
+		if(SpeechBubbleManager.Instance)
 		SpeechBubbleManager.Instance.DisablePlayer1Bubble();
+		if(SpeechBubbleManager.Instance)
 		SpeechBubbleManager.Instance.DisablePlayer2Bubble();
 	}
 }
