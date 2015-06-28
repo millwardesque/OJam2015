@@ -146,6 +146,7 @@ namespace BrainCloudUnity
 			JsonData jLeaderboard = jObj["data"]["social_leaderboard"];
 			IList entries = jLeaderboard as IList;
 
+			if(LeaderboardScores.GetText ())
 			LeaderboardScores.GetText ().text = "Leaderboard: \n";
 
 			int count = 1;
@@ -183,17 +184,18 @@ namespace BrainCloudUnity
 				}
 
 
-
+				if(LeaderboardScores.GetText())
 				LeaderboardScores.GetText().rectTransform.sizeDelta = new Vector2(240,
 				                                                                  100 * count);
 
+				if(LeaderboardScores.GetImage())
 				LeaderboardScores.GetImage().rectTransform.sizeDelta = new Vector2(240,
 				                                                                  100 * (count + 3));
 
+				if(LeaderboardScores.GetText())
 				LeaderboardScores.GetText().rectTransform.anchoredPosition = new Vector2(-120,-30);
+				if(LeaderboardScores.GetImage())
 				LeaderboardScores.GetImage().rectTransform.anchoredPosition = new Vector2(0,10);
-
-
 
 			}
 		}
