@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: 11d4437a3c0664a009705115af3f4100
-timeCreated: 1435445288
+timeCreated: 1435451189
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ghost_on_fire_0
+    21300002: ghost_on_fire_1
+    21300004: ghost_on_fire_2
+    21300006: ghost_on_fire_3
+    21300008: ghost_on_fire_4
+    21300010: ghost_on_fire_5
+    21300012: ghost_on_fire_6
+    21300014: ghost_on_fire_7
+    21300016: ghost_on_fire_8
+    21300018: ghost_on_fire_9
+    21300020: ghost_on_fire_10
+    21300022: ghost_on_fire_11
+    21300024: ghost_on_fire_12
+    21300026: ghost_on_fire_13
+    21300028: ghost_on_fire_14
+    21300030: ghost_on_fire_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,29 +42,189 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ghost_on_fire_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 308
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 308
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 308
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 312
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_4
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 228
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 224
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 224
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_7
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 224
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 116
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 112
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 112
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 112
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 20
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 16
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_14
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 16
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ghost_on_fire_15
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 16
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
