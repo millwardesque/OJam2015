@@ -36,6 +36,12 @@ public class Panel : MonoBehaviour {
 			foreach(GameObject triggerObject in triggerObjects) {
 				GameObject.Destroy(triggerObject);
 			}
+
+			if(GetComponentInChildren<SpriteRenderer>()) {
+				var thisScale = GetComponentInChildren<SpriteRenderer>().gameObject.transform.localScale;
+
+				GetComponentInChildren<SpriteRenderer>().gameObject.transform.localScale = new Vector3(-thisScale.x, -thisScale.y, thisScale.z);
+			}
 			
 			triggerObjects.Clear();
 		}
