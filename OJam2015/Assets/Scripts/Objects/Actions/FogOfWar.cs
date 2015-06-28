@@ -14,9 +14,7 @@ public class FogOfWar : MonoBehaviour {
 		renderer.color = Color.black;
 		
 	}
-	
-	// Update is called once per frame
-	
+
 	float updateTime = 0.1f;
 	
 	void Update () {
