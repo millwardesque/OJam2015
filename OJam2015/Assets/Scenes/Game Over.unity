@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .720588207, g: .720588207, b: .720588207, a: 1}
+  m_Color: {r: 1, g: .490196079, b: .211764708, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0d430c9cea3b248e580ab26becf70b71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
