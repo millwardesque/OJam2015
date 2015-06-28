@@ -38,11 +38,61 @@ public class PlayerGhost : MonoBehaviour {
 		}
 	}
 
-	void Update () {
+	public GameObject hauntedPlayer = null;
+	
+	public Vector3 HauntedPlayer {
+		get {
+			if(ownedPlayer) {
+				return hauntedPlayer.transform.position;
+			}
+			
+			return Vector3.zero;
+		}
+	}
+
+	void UpdateGhostPosition (ref Vector3 ghostPosition)
+	{
 		float x = -YourWorldOrgin.x + TheirWorldOrgin.x + OwnedPlayer.x;
 		float y = -YourWorldOrgin.y + TheirWorldOrgin.y + OwnedPlayer.y;
 		float z = OwnedPlayer.z;
+		ghostPosition = new Vector3 (x, y, z);
+		gameObject.transform.position = ghostPosition;
+	}
 
-		gameObject.transform.position = new Vector3 (x, y, z);
+	float strayTooFarRadiusOfTerror = 7.5f;
+	float returnToGroup = 5.25f;
+	bool isTooFar = false;
+
+	void Update () {
+		Vector3 ghostPosition = Vector3.zero;
+		UpdateGhostPosition (ref ghostPosition);
+
+		float x = HauntedPlayer.x - ghostPosition.x;
+		float y = HauntedPlayer.y - ghostPosition.y;
+
+		if (Mathf.Sqrt (x * x + y * y) > strayTooFarRadiusOfTerror) {
+			if(!isTooFar) {
+				isTooFar = true;
+
+				StaryTooFar ();
+			}
+		}
+
+		if (Mathf.Sqrt (x * x + y * y) < returnToGroup) {
+			if(isTooFar) {
+				isTooFar = false;
+				
+				BackInRange ();
+			}
+		}
+
+	}
+
+	static void StaryTooFar () {
+		Debug.Log ("Where are you going? All hope is losted!");
+	}
+
+	static void BackInRange () {
+		Debug.Log ("Yay, your back!");
 	}
 }
