@@ -253,6 +253,7 @@ MonoBehaviour:
   maxHP: 5
   onFireController: {fileID: 22100000, guid: 49cabfd46a51d4075a6e278b5bbffd94, type: 2}
   onFireDuration: 3
+  damageSound: {fileID: 8300000, guid: dd4a5f6ed8ca346c690c10918d556a13, type: 3}
 --- !u!114 &11468644
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerHealth : Health {
 	public AnimatorOverrideController onFireController;
 	public float onFireDuration = 3f;
+	public AudioClip damageSound;
 	private RuntimeAnimatorController originalController;
 	private Animator playerAnimator;
 	private float onFireRemaining = 0f;
@@ -32,9 +33,12 @@ public class PlayerHealth : Health {
 	protected override void OnChange(int oldHP, int newHP) {
 		GUIManager.Instance.UpdateGUI();
 
+		if (damageSound) {
+			GetComponent<AudioSource>().PlayOneShot(damageSound, 4f);
+		}
+
 		if (onFireController != null) {
 			if (!isOnFire) {
-				GetComponentInChildren<Animator>().runtimeAnimatorController = onFireController;
 				isOnFire = true;
 			}
 			onFireRemaining = onFireDuration;
