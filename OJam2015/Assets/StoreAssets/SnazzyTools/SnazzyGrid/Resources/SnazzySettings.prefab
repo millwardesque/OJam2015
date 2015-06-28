@@ -84,7 +84,7 @@ MonoBehaviour:
   mov2: 1
   angle2: 0
   rotationMode: 0
-  gridIsEnabled: 1
+  gridIsEnabled: 0
   gridIncrement: 1
   gridIncrement2: 2
   moveAmount: 2
@@ -94,7 +94,7 @@ MonoBehaviour:
   snapAreaSize: 0
   rotIncrement: 22.5
   rotIncrement2: 45
-  keyDown: 0
+  keyDown: 1
   settings: 0
   rotAxis: 0
   autoSnap: 1
@@ -121,7 +121,7 @@ MonoBehaviour:
   oldTransform: {fileID: 0}
   oldSelectedTransform: {fileID: 0}
   oldSelectedLength: 1
-  oldPosition: {x: -2, y: -5, z: 0}
+  oldPosition: {x: 187, y: 211.5, z: 0}
   oldScale: {x: 1, y: 1, z: 1}
   oldRotation: {x: -0, y: 0, z: 0}
   movToggleKey: 256

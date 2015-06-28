@@ -18,11 +18,13 @@ public class LeaderboardScores : MonoBehaviour {
 		
 		instance = this;
 
+		gameObject.transform.localScale = Vector3.zero;
+
 		text = gameObject.GetComponent<Text> ();
 		image = gameObject.GetComponentInChildren<Image> ();
 	}
 	
-	private static LeaderboardScores instance = null;
+	public static LeaderboardScores instance = null;
 
 	public static Text GetText() {
 		if (instance == null) {

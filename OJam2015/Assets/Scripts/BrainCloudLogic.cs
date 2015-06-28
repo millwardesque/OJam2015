@@ -194,9 +194,9 @@ namespace BrainCloudUnity
 				                                                                  100 * (count + 3));
 
 				if(LeaderboardScores.GetText())
-				LeaderboardScores.GetText().rectTransform.anchoredPosition = new Vector2(-120,-30);
+				LeaderboardScores.GetText().gameObject.GetComponent<RectTransform>().position = new Vector2(-120,-30);
 				if(LeaderboardScores.GetImage())
-				LeaderboardScores.GetImage().rectTransform.anchoredPosition = new Vector2(0,10);
+					LeaderboardScores.GetImage().gameObject.GetComponent<RectTransform>().position = new Vector2(0,10);
 
 			}
 		}
