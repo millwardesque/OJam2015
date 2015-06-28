@@ -74,7 +74,7 @@ public class PlayerGhost : MonoBehaviour {
 			if(!isTooFar) {
 				isTooFar = true;
 
-				StaryTooFar ();
+				StrayTooFar ();
 			}
 		}
 
@@ -88,11 +88,18 @@ public class PlayerGhost : MonoBehaviour {
 
 	}
 
-	static void StaryTooFar () {
-		Debug.Log ("Where are you going? All hope is losted!");
+	void StrayTooFar () {
+		string message = "We're too far apart!";
+		if (hauntedPlayer.GetComponent<Player>().type == Player.PlayerType.One) {
+			SpeechBubbleManager.Instance.SetPlayer1Message(message);
+		}
+		else {
+			SpeechBubbleManager.Instance.SetPlayer2Message(message);
+		}
 	}
 
-	static void BackInRange () {
-		Debug.Log ("Yay, your back!");
+	void BackInRange () {
+		SpeechBubbleManager.Instance.DisablePlayer1Bubble();
+		SpeechBubbleManager.Instance.DisablePlayer2Bubble();
 	}
 }

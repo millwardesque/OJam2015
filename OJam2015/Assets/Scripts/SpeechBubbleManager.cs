@@ -9,8 +9,10 @@ public class SpeechBubbleManager : MonoBehaviour {
 	public RectTransform canvas;
 	GameObject p1GhostSpeechBubble;
 	GameObject p2GhostSpeechBubble;
-	
+
+	[HideInInspector]
 	public Camera p1Camera;
+	[HideInInspector]
 	public Camera p2Camera;
 
 	public static SpeechBubbleManager Instance = null;
@@ -46,7 +48,7 @@ public class SpeechBubbleManager : MonoBehaviour {
 		if (p1GhostSpeechBubble.activeInHierarchy) {
 			Vector3 anchorPoint = p2Ghost.transform.position + (p2Ghost.GetComponentInChildren<SpriteRenderer>().sprite.bounds.max * 3f);
 			Vector3 screenPos = p1Camera.WorldToViewportPoint(anchorPoint);
-			screenPos = new Vector3(Mathf.Clamp(screenPos.x, 0.2f, 0.8f), Mathf.Clamp (screenPos.y, 0.1f, 0.9f), screenPos.z);
+			screenPos = new Vector3(Mathf.Clamp(screenPos.x, 0.2f, 0.8f), Mathf.Clamp (screenPos.y, 0.1f, 0.95f), screenPos.z);
 
 			screenPos.x *= p1Camera.pixelWidth;
 			screenPos.y *= p1Camera.pixelHeight;
@@ -57,7 +59,7 @@ public class SpeechBubbleManager : MonoBehaviour {
 			Vector3 anchorPoint = p1Ghost.transform.position + (p1Ghost.GetComponentInChildren<SpriteRenderer>().sprite.bounds.max * 3f);
 			Vector3 screenPos = p2Camera.WorldToViewportPoint(anchorPoint);
 			screenPos += new Vector3(1f, 0, 0);
-			screenPos = new Vector3(Mathf.Clamp(screenPos.x, 1.2f, 1.8f), Mathf.Clamp (screenPos.y, 0.1f, 0.9f), screenPos.z);
+			screenPos = new Vector3(Mathf.Clamp(screenPos.x, 1.2f, 1.8f), Mathf.Clamp (screenPos.y, 0.1f, 0.95f), screenPos.z);
 
 			screenPos.x *= p2Camera.pixelWidth;
 			screenPos.y *= p2Camera.pixelHeight;
