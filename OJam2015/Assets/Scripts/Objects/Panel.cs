@@ -44,6 +44,10 @@ public class Panel : MonoBehaviour {
 			}
 			
 			triggerObjects.Clear();
+
+			if (GetComponentInChildren<Light>()) {
+				GetComponentInChildren<Light>().enabled = false;
+			}
 		}
 	}
 	

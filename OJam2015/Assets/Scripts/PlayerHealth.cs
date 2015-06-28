@@ -40,6 +40,7 @@ public class PlayerHealth : Health {
 		if (onFireController != null) {
 			if (!isOnFire) {
 				isOnFire = true;
+				playerAnimator.runtimeAnimatorController = onFireController;
 			}
 			onFireRemaining = onFireDuration;
 		}
