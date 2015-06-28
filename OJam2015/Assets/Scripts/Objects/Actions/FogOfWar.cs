@@ -62,9 +62,6 @@ public class FogOfWar : MonoBehaviour {
 				renderer.color = Color.white;
 				isRevealed = true;
 			}
-			else {
-				Debug.Log (hit.collider.tag);
-			}
 		}
 	}
 }
