@@ -127,15 +127,18 @@ public class GameManager : MonoBehaviour {
 		p2Camera.GetComponent<Camera>().rect = tmp;
 		p2Camera.GetComponent<AudioListener>().enabled = false;
 
-		// @TODO Set the new camera to follow something.
 		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 		if (players.Length > 1) {
 			camera.GetComponent<CameraFollow>().target = players[0].transform;
 			p2Camera.GetComponent<CameraFollow>().target = players[1].transform;
+
+			SpeechBubbleManager.Instance.p2Camera = p2Camera.GetComponent<Camera>();
+			SpeechBubbleManager.Instance.p1Camera = camera.GetComponent<Camera>();
 		}
 		else if (players.Length == 1) {
 			camera.GetComponent<CameraFollow>().target = players[0].transform;
 			p2Camera.GetComponent<CameraFollow>().target = null;
+			SpeechBubbleManager.Instance.p1Camera = camera.GetComponent<Camera>();
 		}
 		else {
 			camera.GetComponent<CameraFollow>().target = null;
