@@ -27,8 +27,10 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (rb.velocity.magnitude < 0.2f) {
 			GetComponentInChildren<Animator>().speed = 0f;
+			StopWalkSound();
 		}
 		else {
+			PlayWalkSound();
 			GetComponentInChildren<Animator>().speed = 1f;
 			if (Mathf.Abs(x) > Mathf.Abs (y)) {
 				if (x > 0) {
@@ -56,5 +58,15 @@ public class PlayerMovement : MonoBehaviour {
 		Vector2 force = new Vector2(x, y) * speed;
 
 		this.rb.AddForce(force);
+	}
+
+	void PlayWalkSound() {
+		if (!GetComponent<AudioSource>().isPlaying) {
+			GetComponent<AudioSource>().Play ();
+		}
+	}
+
+	void StopWalkSound() {
+		GetComponent<AudioSource>().Stop();
 	}
 }
