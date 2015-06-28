@@ -148,6 +148,8 @@ namespace BrainCloudUnity
 
 			LeaderboardScores.GetText ().text = "Leaderboard: \n";
 
+			int count = 1;
+
 			if (entries != null)
 			{
 				foreach (JsonData jEntry in entries)
@@ -176,9 +178,23 @@ namespace BrainCloudUnity
 					instance.m_lb.Add (lbe);
 
 					LeaderboardScores.GetText ().text += lbe.rank.ToString() + ". " + lbe.score.ToString() + "\n";
-
+					count++;
 
 				}
+
+
+
+				LeaderboardScores.GetText().rectTransform.sizeDelta = new Vector2(240,
+				                                                                  100 * count);
+
+				LeaderboardScores.GetImage().rectTransform.sizeDelta = new Vector2(240,
+				                                                                  100 * (count + 3));
+
+				LeaderboardScores.GetText().rectTransform.anchoredPosition = new Vector2(-120,-30);
+				LeaderboardScores.GetImage().rectTransform.anchoredPosition = new Vector2(0,10);
+
+
+
 			}
 		}
 		
