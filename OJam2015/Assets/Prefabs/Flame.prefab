@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  spawnProbability: .0700000003
+  spawnProbability: .00700000022
   impulseOnCollision: 10
 --- !u!212 &21279652
 SpriteRenderer:
@@ -167,7 +167,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spawnProbability
-      value: .0700000003
+      value: .00700000022
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
