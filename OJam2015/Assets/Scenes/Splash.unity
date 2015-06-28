@@ -244,7 +244,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Game Name
+  m_Text: Trial by Fire
 --- !u!222 &455645485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -265,7 +265,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -107.5, y: -6}
+  m_AnchoredPosition: {x: -220, y: -6}
   m_SizeDelta: {x: -215, y: 90}
   m_Pivot: {x: .5, y: 1}
 --- !u!1 &1681825975
@@ -365,7 +365,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -107, y: -121}
+  m_AnchoredPosition: {x: -216, y: -121}
   m_SizeDelta: {x: -214, y: 72}
   m_Pivot: {x: .5, y: 1}
 --- !u!114 &1692011955
@@ -397,7 +397,7 @@ MonoBehaviour:
 
     - Step on switches to help your teammate
 
-    - Avoid fire and reunite with yourself!'
+    - Avoid fire and reach the exit!'
 --- !u!222 &1692011956
 CanvasRenderer:
   m_ObjectHideFlags: 0
