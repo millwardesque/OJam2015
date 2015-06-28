@@ -178,6 +178,7 @@ namespace BrainCloudUnity
 					}
 					instance.m_lb.Add (lbe);
 
+					if(LeaderboardScores.GetText ())
 					LeaderboardScores.GetText ().text += lbe.rank.ToString() + ". " + lbe.score.ToString() + "\n";
 					count++;
 
