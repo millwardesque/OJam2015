@@ -5,6 +5,6 @@ public class MobileControls : MonoBehaviour
 {
 	void Update () 
 	{
-		transform.Translate(Input.acceleration.x, -Input.acceleration.z, 0);
+		transform.Translate(Input.acceleration.x * Time.deltaTime, -Input.acceleration.z * Time.deltaTime, 0);
 	}
 }
